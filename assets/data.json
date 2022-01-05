@@ -1,0 +1,15 @@
+{
+    "name":"Shubham vyas",
+    "role":"Software Eng",
+    "skills":{
+        "node js":"medium",
+        "flutter":"medium",
+        "javascript":"more than medium",
+        "os":[
+           { "title":"Linux"},
+            {"title":"Macos"}
+
+        ]
+    }
+    
+}
