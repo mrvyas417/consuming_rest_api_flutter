@@ -12,6 +12,11 @@ class Data {
     this.curdate,
   });
 
+<<<<<<< HEAD
+=======
+  
+
+>>>>>>> b058db19c9d7751c05f228ef1dda2656bc858dfa
   factory Data.fromMap(Map<String, dynamic> map) {
     return Data(
       username: map['username'] as String,
