@@ -12,15 +12,6 @@ class Data {
     this.curdate,
   });
 
-  // Map<String, dynamic> toMap() {
-  //   return {
-  //     'username': username,
-  //     'followers': followers,
-  //     'follows': follows,
-  //     'curdate': curdate,
-  //   };
-  // }
-
   factory Data.fromMap(Map<String, dynamic> map) {
     return Data(
       username: map['username'] as String,
@@ -32,5 +23,5 @@ class Data {
 
   //String toJson() => json.encode(toMap());
 
-  factory Data.fromJson(String source) => Data.fromMap(json.decode(source));
+  //factory Data.fromJson(String source) => Data.fromMap(json.decode(source));
 }

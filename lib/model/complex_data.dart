@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 // ignore_for_file: unused_local_variable
 
 class ComplexData {
@@ -24,11 +26,13 @@ class Skills {
   String? flutter;
   String? javascript;
   List<OsType>? ostype;
+  List<Vtitle>? vtitle;
   Skills({
     this.nodejs,
     this.flutter,
     this.javascript,
     this.ostype,
+    this.vtitle,
   });
 
   factory Skills.fromMap(Map<String, dynamic> map) {
@@ -37,12 +41,17 @@ class Skills {
     for (int i = 0; i < ost.length; i++) {
       list.add(OsType.fromMap(ost[i]));
     }
+    List<Vtitle> vlist = [];
+    var vlistData = map["Vcontrole"] as List<dynamic>;
+    for (int j = 0; j < vlistData.length; j++) {
+      vlist.add(Vtitle.fromMap(vlistData[j]));
+    }
     return Skills(
-      nodejs: map["node js"],
-      flutter: map['flutter'],
-      javascript: map['javascript'],
-      ostype: list,
-    );
+        nodejs: map["node js"],
+        flutter: map['flutter'],
+        javascript: map['javascript'],
+        ostype: list,
+        vtitle: vlist);
   }
 }
 
@@ -55,6 +64,19 @@ class OsType {
   factory OsType.fromMap(Map<String, dynamic> map) {
     return OsType(
       title: map['title'],
+    );
+  }
+}
+
+class Vtitle {
+  String? vtitle;
+  Vtitle({
+    this.vtitle,
+  });
+
+  factory Vtitle.fromMap(Map<String, dynamic> map) {
+    return Vtitle(
+      vtitle: map['vtitle'],
     );
   }
 }

@@ -9,7 +9,9 @@
            { "title":"Linux"},
             {"title":"Macos"}
 
-        ]
+        ],
+        "Vcontrole":[{"vtitle":"Github"},{"vtitle":"Atalssian"}]
+
     }
     
 }

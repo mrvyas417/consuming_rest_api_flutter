@@ -61,7 +61,8 @@ class _MyAppState extends State<MyApp> {
     });
     var url = "https://shubham-vyas.herokuapp.com/api/v1/instagram";
     var res = await http.get(Uri.parse(url));
-    data = Data.fromJson(res.body);
+    final resDecdode = jsonDecode(res.body);
+    data = Data.fromMap(resDecdode);
     loading = false;
     print(data.username);
     setState(() {});
@@ -74,5 +75,11 @@ getComplex() async {
   final decodedData = jsonDecode(getData);
   var complexdata = ComplexData.fromMap(decodedData);
   print(complexdata.skills!.ostype![1].title);
-  print(complexdata.skills!.flutter);
+  // for (int i = 0; i < complexdata.skills!.ostype!.length; i++) {
+  //   print("with lopping ${complexdata.skills!.ostype![i].title}");
+  // }
+  for (int i = 0; i < complexdata.skills!.vtitle!.length; i++) {
+    print("with lopping ${complexdata.skills!.vtitle![i].vtitle}");
+  }
+  print(complexdata.skills!.javascript);
 }
