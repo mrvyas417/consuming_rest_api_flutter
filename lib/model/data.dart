@@ -12,14 +12,7 @@ class Data {
     this.curdate,
   });
 
-  // Map<String, dynamic> toMap() {
-  //   return {
-  //     'username': username,
-  //     'followers': followers,
-  //     'follows': follows,
-  //     'curdate': curdate,
-  //   };
-  // }
+  
 
   factory Data.fromMap(Map<String, dynamic> map) {
     return Data(
